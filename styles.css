@@ -39,14 +39,16 @@ a{
 }
 .navigation{
     font-family: var(--heading-cta-nav);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 .menu{
     display: flex;
     gap: 4rem;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 .menu .item:hover{
@@ -67,7 +69,7 @@ a{
     margin: auto;
 }
 .button-get-started{
-    max-width: calc(20rem - 4rem);
+    max-width: calc(50% - 4rem);
     padding: 1rem 2rem;
     margin: 2rem auto;
     border-radius: 35px;
@@ -194,16 +196,25 @@ a{
 }
 .input-email{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    margin: 1rem 0;
     align-items: center;
     justify-content: space-between;
 }
+.input-email .button-get-started{
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    width: 100%;
+    font-size: 1em;
+}
 #email{
+    width: calc(100% - 2rem);
     height: 3rem;
     border-radius: 25px;
-    font-size: 1.2em;
-    padding: 0 1rem;
+    font-size: 1.5em;
+    padding: 0rem 1rem;
     outline: none;
 }
 .footer{
@@ -267,4 +278,132 @@ a{
 .social-media .icon:hover{
     color: var(--cta-gradient-1);
     border-color: var(--cta-gradient-1);
+}
+@media (max-width: 1023px){
+    body{
+        --padding-navigation: 6vw;
+        --padding-width: 6vw;
+        font-size: 10px;
+    }
+    .intro{
+        padding: 1.5rem var(--padding-navigation);
+        background: url("./images/bg-curvy-mobile.svg") no-repeat bottom;
+        background-size: contain;
+    }
+    .navigation .logo{
+        width: 300%;
+    }
+    .menu{
+        gap: 2rem;
+    }
+    .content{
+        margin: 3rem auto;
+        width: 90%;
+    }
+    .content .image-intro{
+        width: 100%;
+    }
+    .intro .content .description{
+        width: 95%;
+    }
+    .button-get-started{
+        width: 60%;
+        padding: 0.75rem 2rem;
+    }
+    .features{
+        grid-template-columns: 1fr;
+        margin: 4rem 0;
+    }
+    .feature{
+        width: 90%;
+    }
+    .feature .description{
+        font-size: 1.5em;
+    }
+    .how-it-works{
+        padding: 4rem var(--padding-width);
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .how-it-works .image-productive{
+        width: 100%;
+    }
+    .how-it-works .content{
+        width: 100%;
+    }
+    .how-it-works .content .heading{
+        font-size: 1.75em;
+        width: 100%;
+    }
+    .how-it-works .content .description{
+        font-size: 1.3em;
+        line-height: 1.5em;
+    }
+    .testimonials{
+        width: 70%;
+        margin: auto;
+        padding: 4rem var(--padding-width);
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        background: url("./images/bg-quotes.png") no-repeat top 2rem left calc(var(--padding-width) - 0.5rem);
+    }
+    .testimonials .item{
+        padding: 1.5rem;
+    }
+    .testimonials .item .profile-details p{
+        margin: 5px 0;
+    }
+    .testimonials .item .profile-details .designation{
+        font-size: 0.8em;
+    }
+    .subscribe-section{
+        margin: 0rem auto;
+        padding: 1rem 2rem;
+        width: calc(100% - 2 * var(--padding-width) - 4rem);
+    }
+    .subscribe-section .heading{
+        font-size: 2.2em;
+    }
+    .subscribe-section .description{
+        width: 100%;
+        font-size: 1.35em;
+        line-height: 1.5em;
+    }
+    .input-email{
+        margin: 2rem 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    #email{
+        font-size: 1.75em;
+    }
+    .input-email .button-get-started{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 1.75em;
+    }
+    .footer{
+        padding: 12rem var(--padding-width) 2rem;
+        font-size: 1.1em;
+    }
+    .footer .details{
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+    }
+    .footer .details .contact-details{
+        width: 75%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer .details .links{
+        font-size: 1.35em;
+        grid-template: repeat(7, 1fr) / repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .footer .details .social-media{
+        justify-content: center;
+    }
 }
