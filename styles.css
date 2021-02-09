@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root{
+    --intro-email-bg: hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --footer-bg: hsl(216, 53%, 9%);
+    --testimonial-bg: hsl(219, 30%, 18%);
+    --cta-gradient-1: hsl(176, 68%, 64%);
+    --cta-gradient-2: hsl(198, 60%, 50%);
+    --error: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --heading-cta-nav: 'Raleway', sans-serif;
+    --body: 'Open Sans', sans-serif;
+    --padding-width: 8.25vw;
+    --padding-navigation: 5.5vw;
+}
+body{
+    font-size: 14px;
+    margin: 0;
+    color: white;
+    font-family: var(--body);
+    background-color: var(--main-bg);
+}
+a{
+    text-decoration: none;
+    color: white;
+    height: fit-content;
+}
+.heading{
+    font-family: var(--heading-cta-nav);
+    font-weight: 700;
+}
+.intro{
+    padding: 4.5rem var(--padding-navigation);
+    background: url("./images/bg-curvy-desktop.svg") no-repeat bottom;
+    background-size: contain;
+    background-color: var(--intro-email-bg);
+    text-align: center;
+}
+.navigation{
+    font-family: var(--heading-cta-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.content{
+    margin: 4.5rem auto;
+    width: 65%;
+}
+.intro .content .heading{
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+.intro .content .description{
+    width: 75%;
+    font-size: 1.5em;
+    margin: auto;
+}
+.button-get-started{
+    max-width: calc(20rem - 4rem);
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    border-radius: 35px;
+    background: linear-gradient(to right, var(--cta-gradient-1), var(--cta-gradient-2));
+    font-size: 1.1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.button-get-started:hover{
+    background: var(--cta-gradient-1);
+}
+.features{
+    padding: 0 var(--padding-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 0;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+.feature{
+    width: 60%;
+    margin: auto;
+}
+.feature > * {
+    margin: 1rem 0;
+}
+.feature .heading{
+    font-size: 1.75em;
+}
+.how-it-works{
+    padding: 6rem var(--padding-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.how-it-works .content{
+    margin: 0;
+    width: 90%;
+    font-size: 1.2em;
+}
+.how-it-works .content > *{
+    margin: 1rem 0;
+}
+.how-it-works .content .heading{
+    font-size: 2.5em;
+    width: 70%;
+}
+.how-it-works .content .ext-link{
+    width: fit-content;
+    margin: 2rem 0;
+    padding: 5px 0;
+    color: var(--cta-gradient-1);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+    align-items: center;
+    border-bottom: 1px solid var(--cta-gradient-1);
+    cursor: pointer;
+}
+.how-it-works .content .ext-link > * {
+    margin: 0;
+}
+.how-it-works .content .ext-link:hover{
+    color: white;
+    border-color: white;
+}
+.how-it-works .content .ext-link:hover .icon{
+    fill: white;
+}
+.testimonials{
+    padding: 6rem var(--padding-width);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background: url("./images/bg-quotes.png") no-repeat top 4rem left calc(var(--padding-width) - 0.5rem);
+}
+.testimonials .item{
+    padding: 2rem;
+    background-color: var(--testimonial-bg);
+    border-radius: 7px;
+}
+.testimonials .item .profile-details{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+.testimonials .item .profile-details img{
+    width: 12%;
+    border-radius: 50%;
+}
+.testimonials .item .profile-details p{
+    margin: 5px 0;
+}
+.testimonials .item .profile-details .designation{
+    font-size: 0.8em;
+}
+.subscribe-section{
+    margin: 0rem auto;
+    padding: 1rem 5rem;
+    width: calc(60% - 2 * var(--padding-width));
+    text-align: center;
+    background-color: var(--intro-email-bg);
+    border-radius: 15px;
+    position: relative;
+    top: 8rem;
+    box-shadow: 2px 2px 2px hsla(216, 53%, 9%, 0.3),
+                4px 4px 4px hsla(216, 53%, 9%, 0.3),
+                8px 8px 8px hsla(216, 53%, 9%, 0.3),
+                16px 16px 16px hsla(216, 53%, 9%, 0.3);
+}
+.subscribe-section .heading{
+    font-size: 2em;
+}
+.subscribe-section .description{
+    width: 85%;
+    margin: auto;
+    font-size: 1em;
+}
+.input-email{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+#email{
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 1.2em;
+    padding: 0 1rem;
+    outline: none;
+}
+.footer{
+    background-color: var(--footer-bg);
+    padding: 12rem var(--padding-width) 4rem;
+    font-size: 1.1em;
+}
+.footer .details{
+    display: grid;
+    grid-template-columns: 14fr 5fr 5fr;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.footer .details * {
+    margin: 0;
+}
+.footer .details .contact-details{
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 1rem;
+    column-gap: 3rem;
+}
+.footer .details .contact-details .address{
+    grid-area: 1/1/span 2/1;
+}
+.footer .details .contact-details p{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer .details .links{
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    grid-auto-flow: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.footer .details .links .link:hover{
+    font-weight: 700;
+}
+.footer .details .social-media{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+.social-media .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.75rem;
+    height: 0.75rem;
+    font-size: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.social-media .icon:hover{
+    color: var(--cta-gradient-1);
+    border-color: var(--cta-gradient-1);
+}
