@@ -121,7 +121,7 @@ a{
     width: 70%;
 }
 .how-it-works .content .ext-link{
-    width: fit-content;
+    width: max-content;
     margin: 2rem 0;
     padding: 5px 0;
     color: var(--cta-gradient-1);
@@ -133,7 +133,7 @@ a{
     cursor: pointer;
 }
 .how-it-works .content .ext-link > * {
-    margin: 0;
+    margin: 0;  
 }
 .how-it-works .content .ext-link:hover{
     color: white;
